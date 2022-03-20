@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Python Programming</title>
+</head>
+<style type="text/css">
+	#main1{
+		padding-top: 0px;
+		display: flex;
+		flex-direction: row;
+	}
+	#main-doc{
+		width: 100%;
+		padding: 10px;
+		margin-top: -10px;
+		margin-left: -10px;
+		font-style: italic;
+		text-align: center;
+		font-size: 25px;
+		background-color: rgba(0, 0, 0, 0.8);
+		color: white;
+	}
+	#navbar{
+		margin-top: -18px;
+		margin-left: -7px;
+		width: 300px;
+		height: 100%;
+		border: 2px solid black;
+		text-align: center;
+		padding-top: 0px;
+		position: fixed;
+		font-style: italic;
+		overflow: scroll;
+		overflow-x: hidden;
+	}
+	#nav-link{
+		font-size: 19px;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+		position: relative;
+		top: -40px;
+		padding: 10px;
+		cursor: pointer;
+		width: 280px;
+		font-weight: bolder;
+	}
+	.main-doc{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding-left: 300px;
+		
+	}
+	#header{
+		font-style: italic;
+		text-align: center;
+		background-color: rgba(0, 0, 0, 0.7);
+		padding: 3px;
+		color: white;
+	}
+	#para{
+		font-size: 18px;
+		font-family: Californian FB;
+	}
+	#prog{
+		background-color: rgba(0, 0, 0, 0.3);
+		font-size: 18px;
+		font-family: Consolas;
+		padding: 20px;
+	}
+	td{
+		//width: 90%;
+		padding: 10px;
+		text-align: center;
+	}
+	a{
+		text-decoration: none;
+		color: black;
+	}
+	#row{
+		background-color: rgba(0, 0, 0, 0.3);
+	}
+	#row1{
+		background-color: rgba(0, 0, 0, 0.7);
+	}
+	@media(max-width: 900px){
+		#navbar{
+			position: absolute;
+			width: 100%;
+			height: 50%;
+		}
+		#nav-link{
+			width: 100%;
+		}
+		.main-doc{
+			padding-left: 0px;
+			padding-top: 300px;
+		}
+		
+	}
+</style>
+<body>
+	<main id="main">
+		<section id="main-doc"><h1>Python Programming Tutorials</h1></section><br>
+		<div id="main1">
+			<div class="nav">
+				<nav id="navbar">
+					<h1 style="background-color: rgba(0, 0, 0, 0.3); width: 100%; position: relative;
+						padding-top: 20px;
+						top: -20px; height:80px;" id="he1">Python Programming</h1>
+					<div id="nav-link"><a href="#first">Home</a></div>
+					<div id="nav-link"><a href="#second">Variable Types</a></div>
+					<div id="nav-link"><a href="#third">Basic Operators</a></div>
+					<div id="nav-link"><a href="#forth">Decision Making</a></div>
+					<div id="nav-link"><a href="#fifth">Loops</a></div>
+					<div id="nav-link"><a href="#sixth">Numbers</a></div>
+					<div id="nav-link"><a href="#seventh">Strings</a></div>
+					<div id="nav-link"><a href="#eight">Lists</a></div>
+					<div id="nav-link"><a href="#nine">Tuples</a></div>
+					<div id="nav-link"><a href="#ten">Dictionary</a></div>
+					<div id="nav-link"><a href="#eleven">Functions</a></div>
+					<div id="nav-link"><a href="#tweleve">Modules</a></div>
+					<div id="nav-link"><a href="#thirteen">Files I/O</a></div>
+					<div id="nav-link"><a href="#forteen">Exceptions</a></div>
+					<div id="nav-link"><a href="#fifteen">Classes/Objects</a></div>
+					<div>-----*.*.*.-----</div>
+				</nav> 
+			</div>
+			<div class="main-doc">
+				<section class="main-section">
+					<header id="header"><h1 id="first">Home</h1> </header>
+					<p id="para">Python is a general-purpose interpreted, interactive, object-oriented, and high-level programming language. It was created by Guido van Rossum during 1985- 1990. Like Perl, Python source code is also available under the GNU General Public License (GPL). This tutorial gives enough understanding on Python programming language.</p>
+					<p id="para"><b>Why to Learn Python?</b></p>
+					<p id="para">Python is a high-level, interpreted, interactive and object-oriented scripting  id="para"language. Python is designed to be highly readable. It uses English keywords frequently where as other languages use punctuation, and it has fewer syntactical constructions than other languages.<br></p>
+					<p id="para"><b>Hello World using Python.</b></p>
+					<p id="prog">print ("Hello, Python!");</p>
+					<p id="para"><b>Applications of Python : </b></p>
+					<p id="para">As mentioned before, Python is one of the most widely used language over the web. I'm going to list few of them here :</p>
+					<ul>
+						<li id="para"><b>Easy-to-learn − </b>Python has few keywords, simple structure, and a clearly defined syntax. This allows the student to pick up the language quickly.</li>
+						<li id="para"><b>Easy-to-read − </b>Python code is more clearly defined and visible to the eyes.</li>
+						<li id="para"><b>Easy-to-maintain − </b>Python's source code is fairly easy-to-maintain.</li>
+						<li id="para"><b>A broad standard library − </b>Python's bulk of the library is very portable and cross-platform compatible on UNIX, Windows, and Macintosh.</li>
+						<li id="para"><b>Interactive Mode − </b>Python has support for an interactive mode which allows interactive testing and debugging of snippets of code.</li>
+						<li id="para"><b>Portable − </b>Python can run on a wide variety of hardware platforms and has the same interface on all platforms.</li>
+					</ul>
+				</section>
+				<section class="main-section2">
+					<header id="header"><h1 id="second">Variable Types</h1> </header>
+					<p id="para">Variables are nothing but reserved memory locations to store values. This means that when you create a variable you reserve some space in memory.</p>
+					<p id="para">Based on the data type of a variable, the interpreter allocates memory and decides what can be stored in the reserved memory. Therefore, by assigning different data types to variables, you can store integers, decimals or characters in these variables.</p>
+					<p id="para"><b>Assigning Values to Variables</b></p>
+					<p id="para">Python variables do not need explicit declaration to reserve memory space. The declaration happens automatically when you assign a value to a variable. The equal sign (=) is used to assign values to variables.<br>The operand to the left of the = operator is the name of the variable and the operand to the right of the = operator is the value stored in the variable. For example −</p>
+					<p id="prog">#!/usr/bin/python<br>
+				counter = 100          # An integer assignment<br>
+				miles   = 1000.0       # A floating point<br>
+				name    = "John"       # A string<br>
+
+				print counter<br>
+				print miles<br>
+				print name</p>
+				<p id="para"><b>Multiple Assignment</b></p>
+				<p id="para">Python allows you to assign a single value to several variables simultaneously. For example −</p>
+				<p id="prog">a = b = c = 1</p>
+				<p id="para"><b>Standard Data Types</b></p>
+				<p id="para">The data stored in memory can be of many types. For example, a person's age is stored as a numeric value and his or her address is stored as alphanumeric characters. Python has various standard data types that are used to define the operations possible on them and the storage method for each of them.<br><br>Python has five standard data types −<br></p>
+				<ul>
+					<li id="para">Numbers</li>
+					<li id="para">String</li>
+					<li id="para">List</li>
+					<li id="para">Tuple</li>
+					<li id="para">Dictionary</li>
+				</ul>
+				</section>
+				<section class="main-section">
+					<header id="header"><h1 id="third">Basic Operators</h1> </header>
+					<p id="para">Operators are the constructs which can manipulate the value of operands.<br>Consider the expression 4 + 5 = 9. Here, 4 and 5 are called operands and + is called operator.</p>
+					<p id="para"><b>Types of Operator</b></p>
+					<ul>
+						<li id="para">Arithmetic Operators</li>
+						<li id="para">Comparison (Relational) Operators</li>
+						<li id="para">Assignment Operators</li>
+						<li id="para">Logical Operators</li>
+						<li id="para">Bitwise Operators</li>
+						<li id="para">Membership Operators</li>
+						<li id="para">Identity Operators</li>
+					</ul>
+					<p id="para"><b>Arithmetic Operators  :  </b></p>
+					<table border="1">
+						<tr id="row1">
+							<td id="para">Operator</td>
+							<td id="para">Description</td>
+							<td id="para">Example</td>
+						</tr>
+						<tr>
+							<td id="para">+ Addition</td>
+							<td id="para">Adds values on either side of the operator.</td>
+							<td id="para">a + b = 30</td>
+						</tr>
+						<tr id="row">
+							<td id="para">- Subtraction</td>
+							<td id="para">Subtracts right hand operand from left hand operand.</td>
+							<td id="para">a – b = -10</td>
+						</tr>
+						<tr>
+							<td id="para">* Multiplication</td>
+							<td id="para">Multiplies values on either side of the operator</td>
+							<td id="para">a * b = 200</td>
+						</tr>
+						<tr id="row">
+							<td id="para">/ Division</td>
+							<td id="para">Divides left hand operand by right hand operand</td>
+							<td id="para">b / a = 2</td>
+						</tr>
+						<tr>
+							<td id="para">% Modulus</td>
+							<td id="para">Divides left hand operand by right hand operand and returns remainder</td>
+							<td id="para">b % a = 0</td>
+						</tr>
+					</table>
+					<p id="para"><b>Comparison Operators  :  </b></p>
+					<p id="para">These operators compare the values on either sides of them and decide the relation among them. They are also called Relational operators.</p>
+					<table border="1">
+						<tr id="row1">
+							<td id="para">Operator</td>
+							<td id="para">Description</td>
+							<td id="para">Example</td>
+						</tr>
+						<tr>
+							<td id="para">==</td>
+							<td id="para">If the values of two operands are equal, then the condition becomes true.</td>
+							<td id="para">(a == b) is not true.</td>
+						</tr>
+						<tr id="row">
+							<td id="para">!=</td>
+							<td id="para">If values of two operands are not equal, then condition becomes true.</td>
+							<td id="para">(a != b) is true.</td>
+						</tr>
+						<tr>
+							<td id="para"><></td>
+							<td id="para">If values of two operands are not equal, then condition becomes true.</td>
+							<td id="para">(a <> b) is true. This is similar to != operator.</td>
+						</tr>
+						<tr id="row">
+							<td id="para">></td>
+							<td id="para">If the value of left operand is greater than the value of right operand, then condition becomes true.</td>
+							<td id="para">(a > b) is not true.</td>
+						</tr>
+						<tr>
+							<td id="para"><</td>
+							<td id="para">If the value of left operand is less than the value of right operand, then condition becomes true.</td>
+							<td id="para">(a < b) is true.</td>
+						</tr>
+						<tr id="row">
+							<td id="para">>=</td>
+							<td id="para">If the value of left operand is greater than or equal to the value of right operand, then condition becomes true.</td>
+							<td id="para">(a >= b) is not true.</td>
+						</tr>
+						<tr>
+							<td id="para"><=</td>
+							<td id="para">If the value of left operand is less than or equal to the value of right operand, then condition becomes true.</td>
+							<td id="para">(a <= b) is true.</td>
+						</tr>
+					</table>
+					<p id="para"><b>Assignment Operators  :  </b></p>
+					<p id="para">Assume variable a holds 10 and variable b holds 20, then −</p>
+					<table border="1">
+						<tr id="row1">
+							<td id="para">Operator</td>
+							<td id="para">Description</td>
+							<td id="para">Example</td>
+						</tr>
+						<tr>
+							<td id="para">=</td>
+							<td id="para">Assigns values from right side operands to left side operand</td>
+							<td id="para">c = a + b assigns value of a + b into c</td>
+						</tr>
+						<tr id="row">
+							<td id="para">+= Add AND</td>
+							<td id="para">It adds right operand to the left operand and assign the result to left operand</td>
+							<td id="para">c += a is equivalent to c = c + a</td>
+						</tr>
+						<tr>
+							<td id="para">-= Subtract AND</td>
+							<td id="para">It subtracts right operand from the left operand and assign the result to left operand</td>
+							<td id="para">c -= a is equivalent to c = c - a</td>
+						</tr>
+						<tr id="row">
+							<td id="para">*= Multiply AND</td>
+							<td id="para">It multiplies right operand with the left operand and assign the result to left operand</td>
+							<td id="para">c *= a is equivalent to c = c * a</td>
+						</tr>
+						<tr>
+							<td id="para">/= Divide AND</td>
+							<td id="para">t divides left operand with the right operand and assign the result to left operand</td>
+							<td id="para">c /= a is equivalent to c = c / a</td>
+						</tr>
+						<tr id="row">
+							<td id="para">%= Modulus AND</td>
+							<td id="para">It takes modulus using two operands and assign the result to left operand</td>
+							<td id="para">c %= a is equivalent to c = c % a</td>
+						</tr>
+						<tr>
+							<td id="para">**= Exponent AND</td>
+							<td id="para">Performs exponential (power) calculation on operators and assign value to the left operand</td>
+							<td id="para">c **= a is equivalent to c = c ** a</td>
+						</tr>
+					</table>
+					<p id="para"><b>Bitwise Operators  :  </b></p>
+					<p id="para">Bitwise operator works on bits and performs bit by bit operation. Assume if a = 60; and b = 13; Now in the binary format their values will be 0011 1100 and 0000 1101 respectively. Following table lists out the bitwise operators supported by Python language with an example each in those, we use the above two variables (a and b) as operands −</p>
+					<p id="para">a = 0011 1100<br>b = 0000 1101<br>-----------------<br>a&b = 0000 1100<br>a|b = 0011 1101<br>a^b = 0011 0001<br>~a  = 1100 0011</p>
+					<table border="1">
+						<tr id="row1">
+							<td id="para">Operator</td>
+							<td id="para">Description</td>
+							<td id="para">Example</td>
+						</tr>
+						<tr>
+							<td id="para">& Binary AND</td>
+							<td id="para">Operator copies a bit to the result if it exists in both operands</td>
+							<td id="para">(a & b) (means 0000 1100)</td>
+						</tr>
+						<tr id="row">
+							<td id="para">| Binary OR	</td>
+							<td id="para">It copies a bit if it exists in either operand.</td>
+							<td id="para">(a | b) = 61 (means 0011 1101)</td>
+						</tr>
+						<tr>
+							<td id="para">^ Binary XOR</td>
+							<td id="para">It copies the bit if it is set in one operand but not both.</td>
+							<td id="para">(a ^ b) = 49 (means 0011 0001)</td>
+						</tr>
+						<tr id="row">
+							<td id="para">~ Binary Ones Complement</td>
+							<td id="para">It is unary and has the effect of 'flipping' bits.</td>
+							<td id="para">(~a ) = -61 (means 1100 0011 in 2's complement form due to a signed binary number.</td>
+						</tr>
+						<tr>
+							<td id="para"><< Binary Left Shift</td>
+							<td id="para">The left operands value is moved left by the number of bits specified by the right operand.</td>
+							<td id="para">a << 2 = 240 (means 1111 0000)</td>
+						</tr>
+						<tr id="row">
+							<td id="para">>> Binary Right Shift</td>
+							<td id="para">The left operands value is moved right by the number of bits specified by the right operand.</td>
+							<td id="para">a >> 2 = 15 (means 0000 1111)</td>
+						</tr>
+					</table>
+					<p id="para"><b>Logical Operators  :  </b></p>
+					<p id="para">There are following logical operators supported by Python language. Assume variable a holds 10 and variable b holds 20 then</p>
+					<table border="1">
+						<tr id="row1">
+							<td id="para">Operator</td>
+							<td id="para">Description</td>
+							<td id="para">Example</td>
+						</tr>
+						<tr>
+							<td id="para">and Logical AND</td>
+							<td id="para">If both the operands are true then condition becomes true.</td>
+							<td id="para">(a and b) is true.</td>
+						</tr>
+						<tr id="row">
+							<td id="para">or Logical OR</td>
+							<td id="para">If any of the two operands are non-zero then condition becomes true.</td>
+							<td id="para">(a or b) is true.</td>
+						</tr>
+						<tr>
+							<td id="para">not Logical NOT</td>
+							<td id="para">Used to reverse the logical state of its operand.</td>
+							<td id="para">Not(a and b) is false.</td>
+						</tr>
+					</table>
+					<p id="para"><b>Membership Operators  :  </b></p>
+					<p id="para">Python’s membership operators test for membership in a sequence, such as strings, lists, or tuples. There are two membership operators as explained below −</p>
+					<table border="1">
+						<tr id="row1">
+							<td id="para">Operator</td>
+							<td id="para">Description</td>
+							<td id="para">Example</td>
+						</tr>
+						<tr>
+							<td id="para">in</td>
+							<td id="para">Evaluates to true if it finds a variable in the specified sequence and false otherwise.</td>
+							<td id="para">x in y, here in results in a 1 if x is a member of sequence y.</td>
+						</tr>
+						<tr id="row">
+							<td id="para">not in</td>
+							<td id="para">Evaluates to true if it does not finds a variable in the specified sequence and false otherwise.</td>
+							<td id="para">x not in y, here not in results in a 1 if x is not a member of sequence y.</td>
+						</tr>
+					</table>
+					<p id="para"><b>Identity Operators  :  </b></p>
+					<p id="para">Identity operators compare the memory locations of two objects. There are two Identity operators explained below −</p>
+					<table border="1">
+						<tr id="row1">
+							<td id="para">Operator</td>
+							<td id="para">Description</td>
+							<td id="para">Example</td>
+						</tr>
+						<tr>
+							<td id="para">is</td>
+							<td id="para">Evaluates to true if the variables on either side of the operator point to the same object and false otherwise.</td>
+							<td id="para">x is y, here is results in 1 if id(x) equals id(y).</td>
+						</tr>
+						<tr id="row">
+							<td id="para">is not</td>
+							<td id="para">Evaluates to false if the variables on either side of the operator point to the same object and true otherwise.</td>
+							<td id="para">x is not y, here is not results in 1 if id(x) is not equal to id(y).</td>
+						</tr>
+					</table>
+				</section>
+				<section class="main-section">
+					<header id="header"><h1 id="forth">Decision Making</h1> </header>
+					<p id="para">Decision making is anticipation of conditions occurring while execution of the program and specifying actions taken according to the conditions.<br>Decision structures evaluate multiple expressions which produce TRUE or FALSE as outcome. You need to determine which action to take and which statements to execute if outcome is TRUE or FALSE otherwise.<br>Following is the general form of a typical decision making structure found in most of the programming languages −</p>
+					<p id="para"><b>Single Statement Suites</b></p>
+					<p>If the suite of an if clause consists only of a single line, it may go on the same line as the header statement.</p>
+					<p id="prog">#!/usr/bin/python<br><br>var = 100<br>if ( var == 100 ) : print "Value of expression is 100"<br>print "Good bye!"<br></p>
+					<p id="para">When the above code is executed, it produces the following result −</p>
+					<p id="prog">Value of expression is 100<br>Good bye!</p>
+				</section>
+				<section class="main-section">
+					<header id="header"><h1 id="fifth">Loops</h1> </header>
+					<p id="para">In general, statements are executed sequentially: The first statement in a function is executed first, followed by the second, and so on. There may be a situation when you need to execute a block of code several number of times.<br>Programming languages provide various control structures that allow for more complicated execution paths.<br>A loop statement allows us to execute a statement or group of statements multiple times. The following diagram illustrates a loop statement −</p>
+					<p id="para"><b>Loop Type & Description</b></p>
+					<p id="para"><b>while loop : </b>Repeats a statement or group of statements while a given condition is TRUE. It tests the condition before executing the loop body.</p>
+					<p id="para"><b>for loop : </b>Executes a sequence of statements multiple times and abbreviates the code that manages the loop variable.</p>
+					<p id="para"><b>nested loops : </b>You can use one or more loop inside any another while, for or do..while loop.</p>
+					<p id="para"><b>Loop Control Statements</b></p>
+					<p id="para">Loop control statements change execution from its normal sequence. When execution leaves a scope, all automatic objects that were created in that scope are destroyed.</p>
+					<p id="para"><b>Control Statement & Description : </b></p>
+					<p id="para"><b>break statement</b>Terminates the loop statement and transfers execution to the statement immediately following the loop.</p>
+					<p id="para"><b>continue statement</b>Causes the loop to skip the remainder of its body and immediately retest its condition prior to reiterating.</p>
+					<p id="para"><b>pass statement</b>The pass statement in Python is used when a statement is required syntactically but you do not want any command or code to execute.</p>
+				</section>
+				<section class="main-section">
+					<header id="header"><h1 id="sixth">Numbers</h1> </header>
+					<p id="para">Number data types store numeric values. They are immutable data types, means that changing the value of a number data type results in a newly allocated object.<br>Number objects are created when you assign a value to them. For example −</p>
+					<p id="prog">var1 = 1<br>var2 = 10</p>
+					<p id="para">You can also delete the reference to a number object by using the del statement. The syntax of the del statement is −</p>
+					<p id="prog">del var1[,var2[,var3[....,varN]]]]</p>
+					<p id="para">You can delete a single object or multiple objects by using the del statement. For example −</p>
+					<p id="prog">del var<br>del var_a, var_b</p>
+					<p id="para"><b>Python supports four different numerical types −</b></p>
+					<p id="para"><b>1 . int (signed integers) −</b>They are often called just integers or ints, are positive or negative whole numbers with no decimal point.</p>
+					<p id="para"><b>2 . long (long integers ) −</b>Also called longs, they are integers of unlimited size, written like integers and followed by an uppercase or lowercase L.</p>
+					<p id="para"><b>3 . float (floating point real values) − </b>Also called floats, they represent real numbers and are written with a decimal point dividing the integer and fractional parts. Floats may also be in scientific notation, with E or e indicating the power of 10 (2.5e2 = 2.5 x 102 = 250).</p>
+					<p id="para"><b>4 . complex (complex numbers) − </b>are of the form a + bJ, where a and b are floats and J (or j) represents the square root of -1 (which is an imaginary number). The real part of the number is a, and the imaginary part is b. Complex numbers are not used much in Python programming.</p>
+				</section>
+				<section class="main-section">
+					<header id="header"><h1 id="seventh">Strings</h1> </header>
+					<p id="para">Strings are amongst the most popular types in Python. We can create them simply by enclosing characters in quotes. Python treats single quotes the same as double quotes. Creating strings is as simple as assigning a value to a variable. For example −</p>
+					<p id="prog">var1 = 'Hello World!'<br>var2 = "Python Programming"</p>
+					<p id="para"><b>Accessing Values in Strings</b></p>
+					<p id="para">Python does not support a character type; these are treated as strings of length one, thus also considered a substring.<br>To access substrings, use the square brackets for slicing along with the index or indices to obtain your substring. For example −</p>
+					<p id="prog">#!/usr/bin/python<br><br>var1 = 'Hello World!'<br>var2 = "Python Programming"<br><br>print "var1[0]: ", var1[0]<br>print "var2[1:5]: ", var2[1:5]</p>
+					<p id="para">When the above code is executed, it produces the following result −</p>
+					<p id="prog">var1[0]:  H<br>var2[1:5]:  ytho</p>
+				</section>
+				<section class="main-section">
+					<header id="header"><h1 id="eight">Lists</h1> </header>
+					<p id="para">The list is a most versatile datatype available in Python which can be written as a list of comma-separated values (items) between square brackets. Important thing about a list is that items in a list need not be of the same type.<br>Creating a list is as simple as putting different comma-separated values between square brackets. For example −</p>
+					<p id="prog">list1 = ['physics', 'chemistry', 1997, 2000];<br>list2 = [1, 2, 3, 4, 5 ];<br>list3 = ["a", "b", "c", "d"]</p>
+				</section>
+				<section class="main-section">
+					<header id="header"><h1 id="nine">Tuples</h1> </header>
+					<p id="para">A tuple is a collection of objects which ordered and immutable. Tuples are sequences, just like lists. The differences between tuples and lists are, the tuples cannot be changed unlike lists and tuples use parentheses, whereas lists use square brackets.<br>Creating a tuple is as simple as putting different comma-separated values. Optionally you can put these comma-separated values between parentheses also. For example −</p>
+					<p id="prog">tup1 = ('physics', 'chemistry', 1997, 2000);<br>tup2 = (1, 2, 3, 4, 5 );<br>tup3 = "a", "b", "c", "d";</p>
+				</section>
+				<section class="main-section">
+					<header id="header"><h1 id="ten">Dictionary</h1> </header>
+					<p id="para">Each key is separated from its value by a colon (:), the items are separated by commas, and the whole thing is enclosed in curly braces. An empty dictionary without any items is written with just two curly braces, like this: {}.<br>Keys are unique within a dictionary while values may not be. The values of a dictionary can be of any type, but the keys must be of an immutable data type such as strings, numbers, or tuples.</p>
+					<p id="para"><b>Accessing Values in Dictionary : </b></p>
+					<p id="para">To access dictionary elements, you can use the familiar square brackets along with the key to obtain its value. Following is a simple example −</p>
+					<p id="prog">#!/usr/bin/python<br><br>dict = {'Name': 'Zara', 'Age': 7, 'Class': 'First'}<br>print "dict['Name']: ", dict['Name']<br>print "dict['Age']: ", dict['Age']</p>
+				</section>
+				<section class="main-section">
+					<header id="header"><h1 id="eleven">Functions</h1> </header>
+					<p id="para"><b>Defining a Function</b></p>
+					<p id="para">You can define functions to provide the required functionality. Here are simple rules to define a function in Python.</p>
+					<ul>
+						<li id="para">Function blocks begin with the keyword def followed by the function name and parentheses ( ( ) ).</li>
+						<li id="para">Any input parameters or arguments should be placed within these parentheses. You can also define parameters inside these parentheses.</li>
+						<li id="para">The first statement of a function can be an optional statement - the documentation string of the function or docstring.</li>
+						<li id="para">The code block within every function starts with a colon (:) and is indented.</li>
+						<li id="para">The statement return [expression] exits a function, optionally passing back an expression to the caller. A return statement with no arguments is the same as return None.</li>
+					</ul>
+					<p id="para"><b>Syntax</b></p>
+					<p id="prog">def functionname( parameters ):<br>	"function_docstring"<br>	function_suite<br>	return [expression]</p>
+					<p id="para"><b>Example</b></p>
+					<p id="para">The following function takes a string as input parameter and prints it on standard screen.</p>
+					<p id="prog">def printme( str ):<br>	"This prints a passed string into this function"<br>print str<br>	return</p>
+				</section>
+				<section class="main-section">
+					<header id="header"><h1 id="tweleve">Modules</h1> </header>
+					<p id="para">A module allows you to logically organize your Python code. Grouping related code into a module makes the code easier to understand and use. A module is a Python object with arbitrarily named attributes that you can bind and reference.<br>Simply, a module is a file consisting of Python code. A module can define functions, classes and variables. A module can also include runnable code.</p>
+					<p id="para"><b>Example</b></p>
+					<p id="para">The Python code for a module named aname normally resides in a file named aname.py. Here's an example of a simple module, support.py</p>
+					<p id="prog">def print_func( par ):<br>print "Hello : ", par<br>return</p>
+				</section>
+				<section class="main-section">
+					<header id="header"><h1 id="thirteen">Files I/O</h1> </header>
+					<p id="para">This chapter covers all the basic I/O functions available in Python. For more functions, please refer to standard Python documentation.</p>
+					<p id="para"><b>Printing to the Screen</b></p>
+					<p id="para">The simplest way to produce output is using the print statement where you can pass zero or more expressions separated by commas. This function converts the expressions you pass into a string and writes the result to standard output as follows −</p>
+					<p id="prog">#!/usr/bin/python<br><br>print "Python is really a great language,", "isn't it?"</p>
+					<p id="para">This produces the following result on your standard screen −</p>
+					<p id="prog">Python is really a great language, isn't it?</p>
+				</section>
+				<section class="main-section">
+					<header id="header"><h1 id="forteen">Exceptions</h1> </header>
+					<p id="para">Python provides two very important features to handle any unexpected error in your Python programs and to add debugging capabilities in them −</p>
+					<ul>
+						<li id="para"><b>Exception Handling − </b>This would be covered in this tutorial. Here is a list standard Exceptions available in Python: Standard Exceptions</li>
+						<li id="para"><b>Assertions −  </b>This would be covered in Assertions in Python tutorial.</li>
+					</ul>
+				</section>
+				<section class="main-section">
+					<header id="header"><h1 id="fifteen">Classes/Objects</h1> </header>
+					<p id="para">Python has been an object-oriented language since it existed. Because of this, creating and using classes and objects are downright easy. This chapter helps you become an expert in using Python's object-oriented programming support.<br>If you do not have any previous experience with object-oriented (OO) programming, you may want to consult an introductory course on it or at least a tutorial of some sort so that you have a grasp of the basic concepts.<br>However, here is small introduction of Object-Oriented Programming (OOP) to bring you at speed −</p>
+					<p id="para"><b>Overview of OOP Terminology</b></p>
+					<ul>
+						<li id="para"><b>Class − </b>A user-defined prototype for an object that defines a set of attributes that characterize any object of the class. The attributes are data members (class variables and instance variables) and methods, accessed via dot notation.</li>
+						<li id="para"><b>Class variable − </b>A variable that is shared by all instances of a class. Class variables are defined within a class but outside any of the class's methods. Class variables are not used as frequently as instance variables are.</li>
+						<li id="para"><b>Data member − </b>A class variable or instance variable that holds data associated with a class and its objects.</li>
+						<li id="para"><b>Function overloading − </b> The assignment of more than one behavior to a particular function. The operation performed varies by the types of objects or arguments involved.</li>
+						<li id="para"><b>Instance variable − </b>A variable that is defined inside a method and belongs only to the current instance of a class.</li>
+						<li id="para"><b>Inheritance − </b>The transfer of the characteristics of a class to other classes that are derived from it.</li>
+						<li id="para"><b>Instance − </b>An individual object of a certain class. An object obj that belongs to a class Circle, for example, is an instance of the class Circle.</li>
+						<li id="para"><b>Instantiation − </b>The creation of an instance of a class.</li>
+						<li id="para"><b>Method −</b>A special kind of function that is defined in a class definition.</li>
+						<li id="para"><b>Object − </b>A unique instance of a data structure that's defined by its class. An object comprises both data members (class variables and instance variables) and methods.</li>
+						<li id="para"><b>Operator overloading − </b>The assignment of more than one function to a particular operator.</li>
+					</ul>
+				</section>
+			</div>
+		</div>
+	</main>
+</body>
+</html>
